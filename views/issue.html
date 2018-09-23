@@ -37,7 +37,7 @@
             crossorigin="anonymous"></script>
     <script>
       $(function() {
-        var currentProject = "apitest";//window.location.pathname.replace(/\//g, "");;
+        var currentProject = "apitest";
         var url = "/api/issues/"+currentProject;
         $("#projectTitle").text("All issues for: "+currentProject)
         $.ajax({
@@ -47,7 +47,6 @@
           {
             var issues= [];
             data.forEach(function(ele) {
-              console.log(ele);
               var openstatus;
               (ele.open) ? openstatus = "open" : openstatus = "closed";
               var single = [

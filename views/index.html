@@ -73,13 +73,10 @@
             integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
             crossorigin="anonymous"></script>
     <script>
-
-      const baseURL = "http://localhost:3000/"
-
       $(function() {
         $("#testForm").submit(function(e) {
           $.ajax({
-            url: baseURL + "api/issues/apitest",
+            url: "api/issues/apitest",
             type: "post",
             data: $("#testForm").serialize(),
             success: function(data) {
